@@ -6,4 +6,10 @@ class WelcomeControllerTest < ActionController::TestCase
     assert_response :success
   end
 
+  test "should list JobExperiences in welcome#index" do
+    get :index
+    #assert_template layout: "job_experiences/index"
+    assert_select 'h1', "Listing job_experiences"
+  end
+
 end

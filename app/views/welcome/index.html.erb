@@ -1,16 +1,33 @@
-<h1>Esta es mi pagina personal</h1>
+<%-# commented line -%>
 
-<p>Raul Ferrandez Salvador</p>
-
-<h1>Mis trabajos iterando JobExperience.all.each ...:</h1>
-
-<% JobExperience.all.each do |experience| %>
-    <tr> <%= experience.tittle %> </tr>
+<%-# commented part -%>
+<% if false %>
+    <%= render template: "job_experiences/index" %>
 <% end %>
 
-<h1>Mis trabajos usando render </h1>
+<h1>Raul Ferrandez Salvador</h1>
+<h2>Skalitzer Str. 59A, 10997 Berlin</h2>
+<h2>ferrandezraul@gmail.com</h2>
 
-<%= render template: "job_experiences/index" %>
+<%= image_tag "me.jpg" %>
+
+<h1>Experiencia laboral</h1>
+
+<% @job_experiences.each do |experience| %>
+    <p>
+      <%-# same line -%>
+      Company: <%= experience.company %>,
+      Location: <%= experience.location %>
+    </p>
+    <p>Job Position: <%= experience.tittle %></p>
+    <p>Job description: <%= experience.description %></p>
+    <p>
+      <%-# same line -%>
+      Start date: <%= experience.start_date %>
+      End date: <%= experience.end_date %>
+    </p>
+<% end %>
+
 
 
 
