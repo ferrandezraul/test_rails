@@ -1,5 +1,16 @@
-<h1>Welcome#index</h1>
-
 <h1>Esta es mi pagina personal</h1>
 
-<p>Find me in app/views/welcome/index.html.erb</p>
+<p>Raul Ferrandez Salvador</p>
+
+<h1>Mis trabajos iterando JobExperience.all.each ...:</h1>
+
+<% JobExperience.all.each do |experience| %>
+    <tr> <%= experience.tittle %> </tr>
+<% end %>
+
+<h1>Mis trabajos usando render </h1>
+
+<%= render template: "job_experiences/index" %>
+
+
+
