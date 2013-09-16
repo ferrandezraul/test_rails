@@ -34,7 +34,11 @@ group :doc do
   gem 'sdoc', require: false
 end
 
+# Added awesome print
 gem 'awesome_print'
+
+# Added puma for web server instead of default webrick
+gem 'puma'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
